@@ -15,7 +15,7 @@ services:
       - backend-network
     depends_on:
       - redis-service
-    command: "gunicorn page_tracker.app:app --bind 0.0.0.0:8000"
+    command: "gunicorn page_tracker.app:app --bind 0.0.0.0:5000"
 
 networks:
   backend-network:
