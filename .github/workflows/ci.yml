@@ -28,7 +28,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Push image to Docker Hub
         uses: docker/build-push-action@v4.0.0
-        if: ${{ gihub.event_name == 'push' }}
+        if: ${{ github.event_name == 'push' }}
         with:
           context: ./web
           push: true
